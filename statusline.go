@@ -359,23 +359,15 @@ func (s *StatuslineGit) redraw(file string) {
 
 	s.file = file
 	dir := filepath.Dir(file)
-	out, err := exec.Command("git", "-C", dir, "branch").Output()
+	// prints branch name or "HEAD" if we are in a detached state.
+	out, err := exec.Command("git", "-C", dir, "rev-parse", "--symbolic-full-name", "--abbrev-ref", "HEAD").Output()
 	if err != nil {
 		s.hide()
 		s.branch = ""
 		return
 	}
 
-	branch := ""
-	for _, line := range strings.Split(string(out), "\n") {
-		if strings.HasPrefix(line, "* ") {
-			if strings.HasPrefix(line, "* (HEAD detached at ") {
-				branch = line[20 : len(line)-1]
-			} else {
-				branch = line[2:]
-			}
-		}
-	}
+	branch := strings.TrimSpace(string(out))
 	_, err = exec.Command("git", "-C", dir, "diff", "--quiet").Output()
 	if err != nil {
 		branch += "*"

@@ -1,5 +1,7 @@
 # Gonvim
 
+[![Join the chat at https://gitter.im/dzhou121/Lobby](https://badges.gitter.im/dzhou121/Lobby.svg)](https://gitter.im/dzhou121/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Neovim GUI written in Golang, using a [Golang qt backend](https://github.com/therecipe/qt)
 
 `Downloads:` Pre-built packages for Windows, macOS, and Linux are found at the [Releases](https://github.com/dzhou121/gonvim/releases/) page.

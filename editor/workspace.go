@@ -279,11 +279,11 @@ func (w *Workspace) configure() {
 		w.drawLint = true
 	}
 
-	// 	var startFullscreen interface{}
-	// 	w.nvim.Var("gonvim_start_fullscreen", &startFullscreen)
-	// 	if isTrue(startFullscreen) {
-	// 		e.window.ShowFullScreen()
-	// 	}
+	var startFullscreen interface{}
+	w.nvim.Var("gonvim_start_fullscreen", &startFullscreen)
+	if isTrue(startFullscreen) {
+		editor.window.ShowFullScreen()
+	}
 }
 
 func (w *Workspace) attachUI(path string) error {

@@ -1,6 +1,8 @@
 # Gonvim
 
-[![Join the chat at https://gitter.im/gonvim/gonvim](https://badges.gitter.im/gonvim/gonvim.svg)](https://gitter.im/gonvim/gonvim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+## This is no longer maintained. Please check this fork (https://github.com/akiyosi/goneovim)
+
+## If you're interested, I've started [a new code editor project](https://github.com/lapce/lapce) which is written in Rust.
 
 Neovim GUI written in Golang, using a [Golang qt backend](https://github.com/therecipe/qt)
 
